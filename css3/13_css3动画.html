@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    @keyframes move {
+      0% {
+        transform: translate(0,0);
+      }
+      25% {
+        transform: translate(1000px,0);
+      }
+      50% {
+        transform: translate(1000px,800px);
+      }
+      75% {
+        transform: translate(0,800px);
+      }
+      100% {
+        transform: translate(0,0);
+      }
+    }
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      /*animation-name: move;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;*/
+      /*简写形式*/
+      animation: move 10s infinite alternate
+    ;
+    }
+  </style>
+</head>
+<body>
+  <!--
+      动画是css3最具有颠覆性的特征之一，可通过设置多个节点来精确的控制一个或一组动画，从而实现复杂的动画效果,它比过度的效果更强大
+      1.动画的基本使用
+        (1) 先定义动画
+        @keyframe 动画名称 {
+          0% {
+            width: 100px;
+          }
+          100% {
+            width: 1000px;
+          }
+        }
+        (2) 再调用定义好的动画
+        div {
+          animation-name: 动画名称;
+          animation-duration: 持续时间;
+        }
+      2.动画序列
+        * 0%是动画的开始，100%是动画的完成，这样的规则就是动画序列。
+        * 在@keyframe中规定某项css的样式，就由创建当前样式逐渐改为新样式的动画效果。
+        * 动画是使元素从一个样式逐渐变化为另一个样式的效果，可以改变任意多的样式任意多的次数。
+        * 用百分比规定变化发生的时间，或用from和to,等同于0%和100%。（百分比代表动画执行的时间段）
+      3.动画常见的属性
+             属性                               描述
+             @keyframes                        规定动画如何播放的
+             animation                         所有动画属性的简写属性，除了animation-play-state属性
+             animation-name                    规定@keyframes所使用的动画的名称（必须的）
+             animation-duration                规定动画完成一个周期所花费的秒或者毫秒，默认是0.（必须的）
+             animation-timing-function         规定动画执行的速度曲线，默认是"ease"
+             animation-delay                   规定动画何时开始，默认是0.（规定动画延迟多长时间开始）
+             animation-iteration-count         规定动画被播放的次数，默认值是1，infinite（无限循环）
+             animation-direction               规定动画是否在下一个周期逆向播放，默认值是"normal","alternate"逆向播放
+             animation-play-state              规定动画是否正在运行或者暂停，默认是"running"运行，"paused"暂停
+             animation-fill-mode               规定动画结束后的状态，保持forwards,回到起始的状态backwards（默认）
+      4.动画的简写
+        animation: 动画名称 持续时间 运动曲线 何时开始 播放次数 是否反方向 起始与结束的状态
+        注意：
+          * 简写属性里不包含animation-play-state  -- 经常和鼠标经过等其他样式配合使用
+          * 要想动画走回来，而不是之间掉回来  animation-direction: alternate;
+          * 盒子动画结束后，停在结束位置：animation-fill-mode: forwards;
+      5.速度曲线的细节（animation-timing-function）
+             值                      描述
+             linear                 动画从头到尾的速度是相同的。匀速。
+             ease                   默认，动画以低速开始，然后加快，在结束时变慢。
+             ease-in                动画以低速开始。
+             ease-out               动画以低速结束。
+             ease-in-out            动画以低速开始和结束。
+             steps()                指定了时间函数中的间隔数量（步长）
+  -->
+  <div>
+
+  </div>
+</body>
+</html>

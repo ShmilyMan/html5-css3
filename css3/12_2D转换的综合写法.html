@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      transition: all 1s;
+    }
+    div:hover {
+      transform: translate(200px, 300px) rotate(180deg) scale(2);
+    }
+  </style>
+</head>
+<body>
+  <!--
+      * 同时使用多个转换，其格式为transform: translate() rotate() scale()
+      * 书写的顺序会影响到转换的效果（先旋转会影响坐标轴的方向）
+      * 当我们同时有位置或者其他属性的时候，要将位移放在最前面
+  -->
+  <div></div>
+</body>
+</html>

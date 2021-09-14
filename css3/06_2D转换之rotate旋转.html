@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    img {
+      width: 200px;
+      margin: 500px 800px;
+      border: 3px solid #00a4ff;
+      border-radius: 50%;
+      transform-origin: left bottom;
+      transition: all 3s;
+    }
+    img:hover {
+      transform: rotate(360deg);
+    }
+  </style>
+</head>
+<body>
+  <!--
+      2D旋转（rotate）指的是让元素在二维平面内顺时针或者逆时针旋转
+          1.语法：transform: rotate(度数)  -- 度数的单位是 deg
+          2.重点：
+            * rotate里面跟度数，单位是 deg
+            * 角度为正时顺时针，角度为负时，逆时针
+            * 默认旋转的中心点是元素的中心点
+
+      *** 可以通过 transform-origin: x y; 设置旋转的中心点
+          注意：
+            （1）x y 之间的参数使用空格隔开
+            （2）x y 默认的旋转中心是元素的中心(50%,50%),等价于 center center
+            （3）还可以给x y设置像素值或者方位名词（top，bottom，left，right，center）
+  -->
+  <img src="./media/pic.jpg" />
+</body>
+</html>

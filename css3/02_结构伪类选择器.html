@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    /*ul li:first-child {
+      background-color: pink;
+    }
+    ul li:nth-child(2n) {
+      background-color: pink;
+    }*/
+    div :last-child {
+      background-color: pink;
+    }
+    div span:first-of-type {
+      background-color: skyblue;
+    }
+  </style>
+</head>
+<body>
+  <!--
+      1.属性列表
+          选择符                         简介
+          E:first-child                 匹配父元素中第一个子元素E
+          E:last-child                  匹配父元素中最后一个E元素
+          E:nth-child(n)                匹配父元素中第n个子元素E
+          E:first-of-type               匹配指定类型E的第一个
+          E:last-of-type                匹配指定类型E的最后一个
+          E:nth-of-type(n)              匹配指定类型E的第n个
+      2.nth-child & nth-of-type参数
+          注意：本质上就是选择第几个元素
+          （1）n可以是数字，关键字，公式
+          （2）常见的关键字有 even（偶数） odd（奇数）
+          （3）常见的公式如下（如果n是公式，则从0开始计算）
+              公式              取值
+              2n               偶数
+              2n+1             奇数
+              5n               5 10 15
+              n+5             从第五个（包含第五个）到最后
+             -n+5             前5个（包含第5个）
+      3.-child & -of-type的区别
+         * -child选择父元素中第几个子元素，忽视了元素的类型
+         * -of-type选择的是指定类型的元素（必须指定元素的类型）
+      4.
+        *** 类选择器、属性选择器、伪类选择器的权重都为 10
+  -->
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+  </ul>
+  <div>
+    <p>我是一个p标签</p>
+    <span>我是span标签</span>
+    <span>我是span标签</span>
+    <span>我是span标签</span>
+  </div>
+</body>
+</html>

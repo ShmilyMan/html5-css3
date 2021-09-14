@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      margin: 500px auto;
+      background-color: pink;
+      transform-origin: left bottom;
+    }
+    div:hover {
+      transform: scale(2);
+    }
+  </style>
+</head>
+<body>
+  <!--
+      1.scale的作用：用来控制元素的放大与缩小
+      2.语法：transform: scale(x,y);
+      注意：
+        * x 与 y 之间是通过逗号进行分隔的
+        * transform: scale(1,1);  -- 宽高都放大1倍，相当于没有放大
+        * transform: scale(2,2);  -- 宽高都放大了2倍
+        * transform: scale(2);    -- 如果只写一个参数，则第二个参数默认的和第一个参数一致
+        * transform: scale(0.5,0.5);  -- 当参数小于1时，则意味着缩小原来的多少倍
+        *** scale最大的优势：可以设置转换中心点缩放，默认以中心点缩放，而且不影响其他盒子（改变
+        宽高时水平向两侧扩张，垂直方向沿着上边框向下扩张，而且会影响其他盒子的布局）
+  -->
+  <div>
+
+  </div>
+</body>
+</html>

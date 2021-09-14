@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <!--
+      <audio>:
+        1.可以在不使用标签的情况下，也能够原生的支持音频格式的文件
+        2.播放的格式是有限的
+      ** audio支持的音频格式：
+        格式          IE9     Firefox3.5      Opera10.5     Chrome3.0     Safari3.0
+        Ogg Vorbis                √              √             √
+        MP3           √                                        √             √
+        Wav                       √              √                           √
+      ** audio的参数：
+          属性            值             描述
+          autoplay       autoplay       如果出现该属性，则音频在就绪后会马上播放（谷歌浏览器禁用了该属性）
+          controls       controls       如果出现该属性，则向用户显示控件，比如播放按钮
+          loop           loop           如果出现该属性，则每当音频结束后重新开始播放
+          src            url            要播放音频的URL
+  -->
+  <!--<audio src="./media/snow.mp3" controls="controls"></audio>-->
+
+  <!--因为不同浏览器支持不同的格式，所以我们采取的方案是为这个音频准备多个文件-->
+  <audio controls="controls">
+    <source src="media/snow.mp3" type="audio/mpeg" />
+    <source src="media/snow.ogg" type="audio/ogg" />
+    您的浏览器太low了，不支持audio音频的播放
+  </audio>
+</body>
+</html>

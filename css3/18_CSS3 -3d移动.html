@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body {
+      perspective: 500px;
+    }
+    div {
+      width: 200px;
+      height: 200px;
+      margin: 500px auto;
+      background-color: pink;
+      transform: translateZ(0);
+    }
+  </style>
+</head>
+<body>
+  <!--
+      1.3D移动translate3d（模拟的人眼看的一个物体的移动，也称为物距）：
+        * 3d移动就是在2D移动上多加了一个可以移动的方向，就是Z轴的方向
+        * transform: translateX(100px)：仅仅是在x轴上移动
+        * transform: translateY(100px)：仅仅是在y轴上移动
+        * transform: translateZ(100px)：仅仅是在z轴上移动
+        * transform: translate(x,y,z)：分别在x、y、z轴方向上移动
+        * 注意：x,y,z对应的值不能省略，不需要的用0进行填充
+      2.透视perspective
+        * 如果想要网页上产生3D效果就需要透视（相当于模拟了人的一个眼睛）
+        * 实际上模拟人的视觉位置
+        * 透视也称为视距，所谓的视距就是人的眼睛到屏幕的距离
+        * 距离视距眼睛越近的物体越大，越远的物体越小
+        * 透视的单位是像素
+      注意：透视需要写在被观察元素的父盒子上面，一般给个固定值（500）而改变的是物距（translateZ）
+  -->
+  <div>
+
+  </div>
+</body>
+</html>

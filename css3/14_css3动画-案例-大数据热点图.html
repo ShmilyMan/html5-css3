@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body {
+      background-color: #333;
+    }
+    .map {
+      position: relative;
+      width: 747px;
+      height: 617px;
+      margin: 200px auto;
+      background: url(media/map.png) no-repeat;
+    }
+    .city {
+      position: absolute;
+      top: 228px;
+      right: 197px;
+    }
+    .tb {
+      top: 498px;
+      right: 83px;
+    }
+    .gz {
+      top: 542px;
+      right: 200px;
+    }
+    .city .dotted {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: skyblue;
+    }
+    .city div[class^="pulse"] {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      transform: translate(-50%,-50%);
+      border-radius: 50%;
+      box-shadow: 0 0 12px skyblue;
+      animation: pulse 1.2s linear infinite backwards;
+    }
+    .pulse2 {
+      animation-delay: 0.4s !important;
+    }
+    .pulse3 {
+      animation-delay: 0.8s !important;
+    }
+    /*定义动画*/
+    @keyframes pulse {
+      0% {
+
+      }
+      70% {
+        width: 40px;
+        height: 40px;
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!--一个波纹从开始到最后，如果想要形成涟漪的效果，则必须使用三个波纹的div，三个波纹的div动画播放依次延迟-->
+  <div class="map">
+    <div class="city">
+      <div class="dotted"></div>
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+    </div>
+    <div class="city tb">
+      <div class="dotted"></div>
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+    </div>
+    <div class="city gz">
+      <div class="dotted"></div>
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+    </div>
+  </div>
+</body>
+</html>
